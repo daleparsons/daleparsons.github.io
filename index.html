@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>SNOMED CT Type Ahead || MDT Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Custom Styles-->
+        <link rel="stylesheet" href="styles/custom.css">
+
+    </head>
+    <body>
+        <!--[if IE]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        
+        <!-- Site Content -->
+        <div class="row">
+            <div class="column">
+                <div class="inner-wrap">
+                    <span id="helper"></span>
+                    <!-- Simple Search -->
+                    <h2>MDT <i><span style="background-color:honeydew">SNOMED CT</span></i> Demo</h2>
+                    
+                    <label id="myTextLabel3" for="myText3" style="font-size: 1.6em">Diagnosis</label><br>
+                    <input id="myText3" placeholder="Please enter your search here" />
+                    <br>
+                </div>
+                <!-- Simple Search Results -->
+                <ul id="snomed-dropdown03" name="snomed03">
+                    <!-- JSON Content Here -->
+                </ul>
+
+                <div class="inner-wrap">
+                    <!-- Simple Search -->
+                    <label id="myTextLabel" for="myText" style="font-size: 1.6em">Cell Type</label><br>
+                    <input id="myText" placeholder="Please enter your search here" />
+                    <br>
+                </div>
+                <!-- Simple Search Results -->
+                <ul id="snomed-dropdown" name="snomed">
+                    <!-- JSON Content Here -->
+                </ul>
+                
+            </div>
+
+            <div class="column">
+                <div class="inner-wrap2">
+                    <ul id="advancedItems">
+                        <!-- SYNONYMS -->
+                        <li id="synonymsField">
+                            <span id="synonymsLabel" style="font-size: 1.6em"></span>
+                            <br>
+                            <!-- Parent Search Results -->
+                            <ul id="synonym-snomed-dropdown" name="snomed6">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END SYNONYMS -->
+
+                        <!-- PARENTS -->
+                        <li id="advancedFieldOne">
+                            <span id="parentLabel" style="font-size: 1.6em"></span>
+                            <br>
+                            <!-- Parent Search Results -->
+                            <ul id="parents-snomed-dropdown" name="snomed2">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END PARENTS -->
+
+                        <!-- CHILDREN -->
+                        <li id="advancedFieldTwo">
+                            <span id="childLabel" style="font-size: 1.6em"></span>
+                            <br>
+                            <!-- Child Search Results -->
+                            <ul id="child-snomed-dropdown" name="snomed3">
+                                <!-- JSON return here -->
+                            </ul>
+                            <br><br>
+                        </li>
+                        <!-- END CHILDREN -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            &nbsp;
+        </footer>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    	<script src="scripts/jquery-ui.min.js"></script>
+
+        <!-- Custom Scripts -->
+        <script src="scripts/plugin.js"></script>
+
+    </body>
+</html>
