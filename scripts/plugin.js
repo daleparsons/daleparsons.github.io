@@ -43,7 +43,7 @@ $(function  () {
 
         var getData = function (request, response) {
             //Cell Type
-            var api = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<108369006&filter="
+            var api = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<108369006&filter="
 
             $.getJSON(api + request.term, function (data){
                 $("#helper").text("a");
@@ -96,7 +96,7 @@ $(function  () {
 
         //Diagnosis
         var getData = function (request, response) {
-            var api = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<399981008OR<162572001&filter="
+            var api = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<399981008OR<162572001&filter="
 
             $.getJSON(api + request.term, function (data){
                 $("#helper").text("b");
@@ -152,7 +152,7 @@ $(function  () {
         $.fn.basicFunction2 = function() {
 
         var getData = function (request, response) {
-            var api = "https://nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/%3C118956008&filter="
+            var api = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/%3C118956008&filter="
 
             $.getJSON(api + request.term, function (data){
                 $("#helper").text("c");
@@ -203,7 +203,7 @@ $(function  () {
             var api_parent = 0;
             $.fn.parentsFunctionUpdater = function() {
                 var sctID_parent = $(this).parent().parent().val();
-                api_parent = "https://www.nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/%3E!" + sctID_parent;
+                api_parent = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/%3E!" + sctID_parent;
 
             };
 
@@ -263,7 +263,7 @@ $(function  () {
             $.fn.childFunctionUpdater = function() {
                 var sctID_child = 0;
                 sctID_child = $(this).parent().parent().val();
-                api_child = "https://www.nhswales-snomed-dev.app/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/%3C!" + sctID_child;
+                api_child = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/%3C!" + sctID_child;
             };
 
             $(this).childFunctionUpdater();
