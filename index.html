@@ -1,107 +1,235 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <title>SNOMED CT Type Ahead || MDT Demo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+	<title>Care Plans || SNOMED CT Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            &nbsp;
+        </div>
+        <div class="sidebar">
+            &nbsp;
+        </div>
+    </div>
 
-        <!-- Bootstrap Styles -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Custom Styles-->
-        <link rel="stylesheet" href="styles/custom.css">
+    <div class="wrapper">
+        <div class="left">
+            <div class="left-content">
+                <h2>Operation Note</h2>
 
-    </head>
-    <body>
-        <!--[if IE]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-        
-        <!-- Site Content -->
-        <div class="row">
-            <div class="column">
-                <div class="inner-wrap">
-                    <span id="helper"></span>
-                    <!-- Simple Search -->
-                    <h2>MDT <i><span style="background-color:honeydew">SNOMED CT</span></i> Demo</h2>
-                    
-                    <label id="myTextLabel3" for="myText3" style="font-size: 1.6em">Diagnosis</label><br>
-                    <input id="myText3" placeholder="Please enter your search here" />
-                    <br>
-                </div>
-                <!-- Simple Search Results -->
-                <ul id="snomed-dropdown03" name="snomed03">
-                    <!-- JSON Content Here -->
-                </ul>
-
-                <div class="inner-wrap">
-                    <!-- Simple Search -->
-                    <label id="myTextLabel" for="myText" style="font-size: 1.6em">Cell Type</label><br>
-                    <input id="myText" placeholder="Please enter your search here" />
-                    <br>
-                </div>
-                <!-- Simple Search Results -->
-                <ul id="snomed-dropdown" name="snomed">
-                    <!-- JSON Content Here -->
-                </ul>
-                
-            </div>
-
-            <div class="column">
-                <div class="inner-wrap2">
-                    <ul id="advancedItems">
-                        <!-- SYNONYMS -->
-                        <li id="synonymsField">
-                            <span id="synonymsLabel" style="font-size: 1.6em"></span>
+                <table class="search">
+                    <!-- Indications Search -->
+                    <tr>
+                        <td colpan="3"><label for="myText1">Indications</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="myText1" class="textInput" placeholder="Text here" />
                             <br>
-                            <!-- Parent Search Results -->
-                            <ul id="synonym-snomed-dropdown" name="snomed6">
-                                <!-- JSON return here -->
+                            <ul id="snomed-dropdown01" name="snomed01">
+                                <!-- Results JSON -->
                             </ul>
-                            <br><br>
-                        </li>
-                        <!-- END SYNONYMS -->
-
-                        <!-- PARENTS -->
-                        <li id="advancedFieldOne">
-                            <span id="parentLabel" style="font-size: 1.6em"></span>
+                        </td>
+                        <td class="selectedIndications">
+                            
+                        </td>
+                        <td>
+                            <span class="plusIndications hidden"></span>
+                        </td>
+                    </tr>
+                    <!-- End Indications Search-->
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <!-- Operating Procedure -->
+                    <tr>
+                        <td colpan="3"><label for="myText3">Operating Procedure</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="myText3" class="textInput" placeholder="Text here" />
                             <br>
-                            <!-- Parent Search Results -->
-                            <ul id="parents-snomed-dropdown" name="snomed2">
-                                <!-- JSON return here -->
+                            <ul id="snomed-dropdown03" name="snomed03">
+                                <!-- Results JSON -->
                             </ul>
-                            <br><br>
-                        </li>
-                        <!-- END PARENTS -->
-
-                        <!-- CHILDREN -->
-                        <li id="advancedFieldTwo">
-                            <span id="childLabel" style="font-size: 1.6em"></span>
+                        </td>
+                        <td class="selectedProcedure">
+                            
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <!-- End Operating Procedure -->
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <!-- Findings Search-->
+                    <tr>
+                        <td colpan="3"><label for="myText2">Findings</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="myText2" class="textInput" placeholder="Text here" />
                             <br>
-                            <!-- Child Search Results -->
-                            <ul id="child-snomed-dropdown" name="snomed3">
-                                <!-- JSON return here -->
+                            <ul id="snomed-dropdown02" name="snomed02">
+                                <!-- Results JSON -->
                             </ul>
-                            <br><br>
-                        </li>
-                        <!-- END CHILDREN -->
-                    </ul>
-                </div>
+                        </td>
+                        <td class="selectedFindings">
+
+                        </td>
+                        <td>
+                            <span class="plusFindings hidden"></span>
+                        </td>
+                    </tr>
+                    <!-- End Findings Search-->
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <!-- Closure -->
+                    <tr>
+                        <td colspan="3">
+                            <label for="myTextArea01">Closure</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <textarea id="myTextArea01" placeholder="enter something exciting here.."></textarea>
+                        </td>
+                    </tr>
+                    <!-- End Closure -->
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <!--Post Op Requirements-->
+                    <tr>
+                        <td colspan="3">
+                            <label for="myTextArea02">Post Op Requirements</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <textarea id="myTextArea02" placeholder="enter something exciting here.."></textarea>
+                        </td>
+                    </tr>
+                    <!-- End Post Op Requirements -->
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <!-- Sensitve & Print -->
+                    <tr>
+                        <td colspan="2">
+                            <label>Sensitive</label>
+                            <div class="slider"> 
+                                <input type="checkbox" value="None" id="slideCheckbox03" name="check" />
+                                <label for="slideCheckbox03"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <label>Print</label>
+
+                            <div class="slider"> 
+                                <input type="checkbox" value="None" id="slideCheckbox04" name="check" />
+                                <label for="slideCheckbox04"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- End ensitve & Print -->
+                </table>
             </div>
         </div>
+        <div class="right">
+            <div class="right-content">
+                <h2>Anaesthetic</h2>
 
-        <footer>
-            &nbsp;
-        </footer>
+                <table class="search">
+                    <!-- Operating Procedure -->
+                    <tr>
+                        <td colpan="3"><label for="myText4">Anaesthetic Type</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="myText4" class="textInput" placeholder="Text here" />
+                            <br>
+                            <ul id="snomed-dropdown04" name="snomed04">
+                                <!-- Results JSON -->
+                            </ul>
+                        </td>
+                        <td class="selectedAnaesthetic">
+                            
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <!-- End Operating Procedure -->
 
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-    	<script src="scripts/jquery-ui.min.js"></script>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <!-- Custom Scripts -->
-        <script src="scripts/plugin.js"></script>
+    <header>
+        <table>
+            <tr>
+                <td rowspan="5" style="font-size: 1.4em;">the Martian, Marvin (Mr.)</td>
+                <td>NHS Number:</td>
+                <td>00000000001</td>
+                <td>Date of Birth:</td>
+                <td>24-Jul-1948 (73y)</td>
+            </tr>
+            <tr>
+                <td>Ward:</td>
+                <td>-</td>
+                <td>Gender:</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Clincian</td>
+                <td>-</td>
+                <td>Address:</td>
+                <td>123 Streetname</td>
+            </tr>
+            <tr>
 
-    </body>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Mars {planet}</td>
+            </tr>
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>NE57 1EE</td>
+            </tr>
+        </table>
+    </header>
+
+
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <span>SNOMED CT Demo</span>
+        <span id="border"></span>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <!--<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>-->
+    <script src="script/jquery-1.11.1.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="script/app2.js"></script>
+    <script src="script/search.js"></script>
+
+</body>
 </html>
