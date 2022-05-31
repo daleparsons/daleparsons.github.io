@@ -164,7 +164,7 @@ $(function () {
     dropdown04.empty();
 
     var getData = function (request, response){
-        var api = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/<71388002&count=5&filter="
+        var api = "https://termservdhew.wales.nhs.uk/fhir/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs=ecl/(%3C71388002:363701004=373477003)OR(%3C71388002:363701004=373288007)OR(%3C71388002:363701004=372614000)&count=5&filter="
         $.getJSON(api + request.term, function (data){
             dropdown04.html('<li>Results: <b>' + data.expansion.total + '</b></li>');
             $("#snomed-dropdown04 > li").first().focus();
